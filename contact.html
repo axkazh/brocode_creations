@@ -66,15 +66,24 @@ OR
 <h2 class="section-title">
 Customer Order Form
 </h2>
-<input type="text"
+<form id="orderForm">
+<input
+type="text"
+id="name"
 placeholder="Your Name"
 required>
 
+
 <br><br>
 
-<input type="tel"
+<input
+type="tel"
+id="phone"
 placeholder="Phone Number"
 required>
+
+
+
 
 <br><br>
 
@@ -116,14 +125,22 @@ Select Product
 
 <br><br>
 
-<input type="date" required>
+<input
+type="date"
+id="deliveryDate"
+required>
+
 
 <br><br>
+<label>Delivery Address</label>
 
 <textarea
-rows="6"
-placeholder="Additional Requirements (Color, Photos, Custom Message, Special Instructions etc.)">
+id="address"
+placeholder="Enter your full delivery address"
+rows="4"
+required>
 </textarea>
+
 
 <br><br>
 
@@ -163,6 +180,41 @@ Order Information
 </footer>
 
 <script src="script.js"></script>
+
+<script>
+
+document.getElementById("orderForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const name = document.getElementById("name").value;
+const phone = document.getElementById("phone").value;
+const address = document.getElementById("address").value;
+const category = document.getElementById("category").value;
+const product = document.getElementById("product").value;
+const date = document.getElementById("deliveryDate").value;
+
+const message = `🎁 *New Order - BROCODE*
+
+ Name: ${name}
+
+ Phone: ${phone}
+
+ Address: ${address}
+
+ Category: ${category}
+
+ Product: ${product}
+
+ Delivery Date: ${date}`;
+
+const whatsappURL = `https://wa.me/919042743042?text=${encodeURIComponent(message)}`;
+
+window.open(whatsappURL, "_blank");
+
+});
+
+</script>
 
 </body>
 </html>
