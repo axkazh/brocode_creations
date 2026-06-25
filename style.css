@@ -553,4 +553,91 @@ border-top:1px solid rgba(255,215,0,.3);
 margin-top:80px;
 
 }
+.team-container{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+margin-top:40px;
+
+}
+
+.team-card{
+
+background:#111;
+
+border:2px solid rgba(255,215,0,.25);
+
+padding:25px;
+
+border-radius:18px;
+
+width:280px;
+
+text-align:center;
+
+transition:.35s;
+
+box-shadow:0 0 15px rgba(255,215,0,.12);
+
+}
+
+.team-card:hover{
+
+transform:translateY(-8px);
+
+border-color:#FFD700;
+
+box-shadow:0 0 25px rgba(255,215,0,.35);
+
+}
+
+.team-card h3{
+
+color:#FFD700;
+
+margin-bottom:10px;
+
+}
+
+.team-card p{
+
+color:#ddd;
+
+margin-bottom:20px;
+
+}
+
+.insta-btn{
+
+display:inline-block;
+
+padding:12px 22px;
+
+background:#FFD700;
+
+color:#111;
+
+font-weight:bold;
+
+text-decoration:none;
+
+border-radius:30px;
+
+transition:.3s;
+
+}
+
+.insta-btn:hover{
+
+background:#fff;
+
+transform:scale(1.05);
+
+}
 
