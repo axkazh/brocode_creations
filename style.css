@@ -1,0 +1,556 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:#000;
+    border-bottom:2px solid gold;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-container img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
+.brand-text h2{
+    color:gold;
+    font-size:24px;
+}
+
+.brand-text p{
+    color:#ccc;
+    font-size:12px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:gold;
+}
+
+/* Hero Section */
+
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:gold;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.3rem;
+    color:#ddd;
+    max-width:700px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    background:gold;
+    color:black;
+    padding:14px 28px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    border:2px solid gold;
+    color:gold;
+    padding:14px 28px;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.btn-outline:hover{
+    background:gold;
+    color:black;
+}
+
+/* Categories */
+
+.categories{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    color:gold;
+    font-size:2.5rem;
+    margin-bottom:40px;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.category-card{
+    background:#1a1a1a;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    border:1px solid #333;
+    transition:0.3s;
+}
+
+.category-card:hover{
+    transform:translateY(-8px);
+    border-color:gold;
+}
+
+.category-card h3{
+    color:gold;
+    margin-bottom:10px;
+}
+
+/* Why Choose Us */
+
+.features{
+    padding:80px 8%;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.feature-card{
+    background:#1a1a1a;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+}
+
+/* Contact */
+
+.contact{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.contact p{
+    margin-top:10px;
+    color:#ccc;
+}
+
+/* Footer */
+
+footer{
+    background:black;
+    padding:25px;
+    text-align:center;
+    border-top:1px solid gold;
+}
+
+footer p{
+    color:#aaa;
+}
+
+/* WhatsApp Floating Button */
+
+.whatsapp-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25D366;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:28px;
+    box-shadow:0 0 15px rgba(0,0,0,0.4);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+}
+/* ADD THIS BELOW */
+
+.category-card{
+    text-decoration:none;
+    color:white;
+}
+.founder{
+    padding:60px 8%;
+    text-align:center;
+}
+
+.founder p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+.social-links{
+    margin-top:20px;
+}
+
+.social-links a{
+    text-decoration:none;
+    color:gold;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.social-links a:hover{
+    color:white;
+}
+.category-card .btn{
+    display:inline-block;
+    margin-top:15px;
+}
+.language-switch{
+    display:flex;
+    gap:10px;
+}
+
+.language-switch button{
+    background:gold;
+    border:none;
+    padding:8px 10px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+.contact form{
+    max-width:700px;
+    margin:auto;
+    background:#1a1a1a;
+    padding:30px;
+    border-radius:15px;
+    border:1px solid gold;
+}
+
+.contact input,
+.contact select,
+.contact textarea{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#2a2a2a;
+    color:white;
+}
+
+.contact button{
+    border:none;
+    cursor:pointer;
+    width:100%;
+}
+.whatsapp-btn{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 0 15px rgba(0,0,0,0.4);
+z-index:999;
+}
+.custom-order{
+text-align:center;
+padding:80px 20px;
+}
+
+.custom-order h2{
+margin-bottom:15px;
+}
+
+.custom-order p{
+margin-bottom:25px;
+font-size:18px;
+}
+.category-card h3{
+    margin-top:15px;
+    margin-bottom:10px;
+}
+
+.category-card p{
+    margin-bottom:15px;
+}
+
+.category-card .btn{
+    display:inline-block;
+    margin-top:10px;
+}
+.instagram-link{
+    color:gold;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.instagram-link:hover{
+    color:white;
+}.secondary-logo{
+
+width:90px;
+height:90px;
+
+margin:25px auto;
+
+border:3px solid gold;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:34px;
+
+font-weight:bold;
+
+letter-spacing:3px;
+
+color:gold;
+
+background:#111;
+
+box-shadow:0 0 20px rgba(255,215,0,0.35);
+
+transition:0.4s;
+
+}
+
+.secondary-logo:hover{
+
+transform:scale(1.08) rotate(5deg);
+
+box-shadow:0 0 30px gold;
+
+}
+
+.hero-slogan{
+
+font-size:20px;
+
+color:#ddd;
+
+margin-top:20px;
+
+line-height:1.7;
+
+}
+
+.brand-signature{
+
+text-align:center;
+
+padding:60px 20px;
+
+}
+
+.footer-logo{
+
+margin-bottom:20px;
+
+}
+.brand-title{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:20px;
+
+}
+
+.secondary-logo-small{
+
+width:60px;
+height:60px;
+
+border:2px solid gold;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:gold;
+
+font-size:22px;
+
+font-weight:bold;
+
+background:#111;
+
+box-shadow:0 0 12px rgba(255,215,0,.4);
+
+}
+
+.brand-title h1{
+
+margin:0;
+
+font-size:60px;
+
+color:gold;
+
+}
+#loader{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:#0d0d0d;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:99999;
+
+transition:.5s;
+
+}
+
+#loader h1{
+
+color:#FFD700;
+
+font-size:48px;
+
+margin-top:20px;
+
+}
+
+#loader p{
+
+color:white;
+
+opacity:.8;
+
+}
+
+.small-bc{
+
+width:75px;
+
+height:75px;
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
+
+.brand-footer{
+
+text-align:center;
+
+padding:50px 20px;
+
+border-top:1px solid rgba(255,215,0,.3);
+
+margin-top:80px;
+
+}
+
